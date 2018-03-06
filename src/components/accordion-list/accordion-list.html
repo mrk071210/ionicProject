@@ -1,0 +1,19 @@
+<!-- Generated template for the AccordionListComponent component -->
+<ion-list class="accordion-list">
+  <ion-list-header no-lines no-padding>
+    <button ion-item detail-none
+      [style.background]="headerColor"
+      (click)="toggleAccordion()"
+      class="acordion-header"
+      [class.active]="expanded">
+      <ion-icon name="ios-arrow-forward" item-left></ion-icon>
+      {{title}}
+    </button>
+    <section #accordionContent
+             [style.background]="contentColor"
+             [class.active]="expanded"
+             class="accordion-content">
+        <ng-content></ng-content>
+    </section>
+  </ion-list-header>
+</ion-list>

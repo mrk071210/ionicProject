@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Accordion List</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <p>list-example</p>
+  <accordion-list *ngFor="let item of items;let index = index"
+                  [title]="item.name"
+                  textColor="#FFF"
+                  hasMargin="false"
+                  [expanded]="index === 0">
+    <img [src]="item.imageUrl" alt="">
+    <p text-wrap>{{item.description}}</p>
+  </accordion-list>
+</ion-content>
